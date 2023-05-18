@@ -1,0 +1,24 @@
+{
+  "name": "webpulse",
+  "version": "1.0.0-beta",
+  "description": "Webpulse is a javascript library for making fetch requests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dealcraft/webpulse.git"
+  },
+  "keywords": [
+    "fetch",
+    "request",
+    "webrequest"
+  ],
+  "author": "Dealcraft <david@dealcraft.de> (https://dealcraft.de)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Dealcraft/webpulse/issues"
+  },
+  "homepage": "https://github.com/Dealcraft/webpulse#readme"
+}
