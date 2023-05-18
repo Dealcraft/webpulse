@@ -27,6 +27,7 @@ jobs:
             - run: node ./gpr/pre-publish.js
               name: 'Run gpr pre-publish procedure'
             - run: npm ci
+            - run: npm run build
             - run: npm publish --registry=https://npm.pkg.github.com/ --scope=@Dealcraft --tag=$tag
               name: 'Publish package to github package registry'
               env:

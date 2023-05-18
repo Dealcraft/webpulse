@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "lib": ["DOM", "ES2015"],
+
+    "outDir": "./dist",
+    "declarationDir": "./types",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    "rootDir": "./src",
+    "baseUrl": "./src",
+
+    "removeComments": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "types": ["@types/node"]
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules", "dist", "gpr"]
+}

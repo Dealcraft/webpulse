@@ -4,7 +4,18 @@
   "description": "Webpulse is a javascript library for making fetch requests",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "tsc --watch",
+    "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
+    "format:check": "prettier --ignore-path .gitignore --write",
+    "format:write": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\"",
+    "format": "npm run format:check",
+    "build:cjs": "tsc",
+    "build:esm": "tsc -m es6 --outDir dist/esm",
+    "build:umd:minified": "webpack --mode=production",
+    "build:umd:bundled": "webpack --mode=development",
+    "build:umd": "npm run build:umd:bundled & npm run build:umd:minified",
+    "build:clean": "rm -rf dist & rm -rf types",
+    "build": "npm run build:clean && npm run build:cjs && npm run build:esm && npm run build:umd"
   },
   "repository": {
     "type": "git",
@@ -20,5 +31,20 @@
   "bugs": {
     "url": "https://github.com/Dealcraft/webpulse/issues"
   },
-  "homepage": "https://github.com/Dealcraft/webpulse#readme"
+  "homepage": "https://github.com/Dealcraft/webpulse#readme",
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/preset-typescript": "^7.21.5",
+    "@typescript-eslint/eslint-plugin": "^5.59.6",
+    "@typescript-eslint/parser": "^5.59.6",
+    "babel-loader": "^9.1.2",
+    "eslint": "^8.40.0",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
+    "ts-loader": "^9.4.2",
+    "typescript": "^5.0.4",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
+  }
 }
